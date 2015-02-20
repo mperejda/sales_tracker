@@ -1,31 +1,35 @@
-%h1 Listing contacts
+.container
+  .row
+    .panel
+      .panel-body
+        %h1 Listing contacts
 
-%table.table-striped
-  %thead
-    %tr
-      %th Name
-      %th Temperature
-      %th Email
-      %th Phone number
-      %th Assigned
-      %th Source
-      %th
-      %th
-      %th
+        %table.table.table-striped
+          %thead
+            %tr
+              %th Name
+              %th Temperature
+              %th Email
+              %th Phone number
+              %th Assigned
+              %th Source
+              %th
+              %th
+              %th
 
-  %tbody
-    - @contacts.each do |contact|
-      %tr
-        %td= contact.name
-        %td= contact.temperature
-        %td= contact.email
-        %td= contact.phone_number
-        %td= contact.assigned
-        %td= contact.source
-        %td= link_to 'Show', contact
-        %td= link_to 'Edit', edit_contact_path(contact)
-        %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          %tbody
+            - @contacts.each do |contact|
+              %tr
+                %td= contact.name
+                %td= contact.temperature
+                %td= contact.email
+                %td= contact.phone_number
+                %td= contact.assigned
+                %td= contact.source
+                %td= link_to 'Show', contact
+                %td= link_to 'Edit', edit_contact_path(contact)
+                %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
+        %br
 
-= link_to 'New Contact', new_contact_path
+        = link_to 'New Contact', new_contact_path

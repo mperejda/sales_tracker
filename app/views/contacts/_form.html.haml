@@ -6,23 +6,23 @@
         - @contact.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .form-group
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name, :class=> 'form-control'
+  .form-group
     = f.label :temperature
-    = f.text_field :temperature
-  .field
+    = f.text_field :temperature, :class=> 'form-control'
+  .form-group
     = f.label :email
-    = f.text_field :email
-  .field
+    = f.text_field :email, :class=> 'form-control'
+  .form-group
     = f.label :phone_number
-    = f.text_field :phone_number
-  .field
+    = f.text_field :phone_number, :class=> 'form-control'
+  .form-group
     = f.label :assigned
-    = f.text_field :assigned
-  .field
+    = f.text_field :assigned, :class=> 'form-control'
+  .form-group
     = f.label :source
-    = f.text_field :source
+    = f.text_field :source, :class=> 'form-control'
   .actions
     = f.submit 'Save'
