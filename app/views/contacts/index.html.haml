@@ -8,6 +8,7 @@
           %thead
             %tr
               %th Name
+              %th Organization
               %th Email
               %th Phone number
               %th Assigned
@@ -19,11 +20,12 @@
           %tbody
             - @contacts.each do |contact|
               %tr
-                %td= contact.name
-                %td= contact.email
-                %td= contact.phone_number
-                %td= contact.assigned
-                %td= contact.source
+                %td= best_in_place contact, :name, :type => :input
+                %td= best_in_place contact, :organization, :type => :input
+                %td= best_in_place contact, :email
+                %td= best_in_place contact, :phone_number
+                %td= best_in_place contact, :assigned
+                %td= best_in_place contact, :source
                 %td= link_to 'Show', contact
                 %td= link_to 'Edit', edit_contact_path(contact)
                 %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
