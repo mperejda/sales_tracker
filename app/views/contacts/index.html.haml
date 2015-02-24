@@ -8,7 +8,6 @@
           %thead
             %tr
               %th Name
-              %th Temperature
               %th Email
               %th Phone number
               %th Assigned
@@ -21,7 +20,6 @@
             - @contacts.each do |contact|
               %tr
                 %td= contact.name
-                %td= contact.temperature
                 %td= contact.email
                 %td= contact.phone_number
                 %td= contact.assigned
