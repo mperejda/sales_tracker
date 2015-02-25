@@ -13,6 +13,7 @@
               %th Phone number
               %th Assigned
               %th Source
+              %th Converted?
               %th
               %th
               %th
@@ -20,12 +21,13 @@
           %tbody
             - @contacts.each do |contact|
               %tr
-                %td= best_in_place contact, :name, :type => :input
-                %td= best_in_place contact, :organization, :type => :input
+                %td= best_in_place contact, :name
+                %td= best_in_place contact, :organization
                 %td= best_in_place contact, :email
                 %td= best_in_place contact, :phone_number
                 %td= best_in_place contact, :assigned
                 %td= best_in_place contact, :source
+                %td= best_in_place contact, :converted, :type => :input
                 %td= link_to 'Show', contact
                 %td= link_to 'Edit', edit_contact_path(contact)
                 %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
