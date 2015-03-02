@@ -1,0 +1,9 @@
+= form_for @lead, layout: :horizontal do |f|
+  = f.text_field :project, :class => 'form-control'
+  = f.text_field :needs, :class => 'form-control'
+  = f.text_field :source, :class => 'form-control'
+  = f.text_field :contact, :class => 'form-control'
+  = f.text_field :assigned, :class => 'form-control'
+  = f.text_field :temperature, :class => 'form-control'
+  = f.text_field :value, :class => 'form-control'
+  = f.submit :class => 'btn btn-primary'
