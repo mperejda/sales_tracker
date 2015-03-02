@@ -3,7 +3,7 @@
     = link_to new_lead_path, :class => 'btn btn-primary' do
       %span.glyphicon.glyphicon-plus
       New Lead
-    %h1 Listing leads
+    %h3 Hot Sauce
 
   .table-responsive
     %table.table.table-striped.table-bordered.table-hover
@@ -17,19 +17,72 @@
           %th Temperature
           %th Value
           %th
-          %th
+
+      %tbody
+        - hot_leads.each do |lead|
+          %tr
+            %td= best_in_place lead, :project
+            %td= best_in_place lead, :needs, :as => :textarea
+            %td= best_in_place lead, :source
+            %td= best_in_place lead, :contact
+            %td= best_in_place lead, :assigned
+            %td= best_in_place lead, :temperature
+            %td= best_in_place lead, :value
+            %td= link_to 'Destroy', lead, :data => { confirm: 'Are you sure?' }, :method => :delete
+
+
+
+  %h3 Medium Temps
+
+  .table-responsive
+    %table.table.table-striped.table-bordered.table-hover
+      %thead
+        %tr
+          %th Project
+          %th Needs
+          %th Source
+          %th Contact
+          %th Assigned
+          %th Temperature
+          %th Value
           %th
 
       %tbody
-        - @leads.each do |lead|
+        - medium_leads.each do |lead|
           %tr
-            %td= lead.project
-            %td= lead.needs
-            %td= lead.source
-            %td= lead.contact
-            %td= lead.assigned
-            %td= lead.temperature
-            %td= lead.value
-            %td= link_to 'Show', lead
-            %td= link_to 'Edit', edit_lead_path(lead)
+            %td= best_in_place lead, :project
+            %td= best_in_place lead, :needs, :as => :textarea
+            %td= best_in_place lead, :source
+            %td= best_in_place lead, :contact
+            %td= best_in_place lead, :assigned
+            %td= best_in_place lead, :temperature
+            %td= best_in_place lead, :value
+            %td= link_to 'Destroy', lead, :data => { confirm: 'Are you sure?' }, :method => :delete
+
+
+  %h3 Cold Leads
+
+  .table-responsive
+    %table.table.table-striped.table-bordered.table-hover
+      %thead
+        %tr
+          %th Project
+          %th Needs
+          %th Source
+          %th Contact
+          %th Assigned
+          %th Temperature
+          %th Value
+          %th
+
+      %tbody
+        - cold_leads.each do |lead|
+          %tr
+            %td= best_in_place lead, :project
+            %td= best_in_place lead, :needs, :as => :textarea
+            %td= best_in_place lead, :source
+            %td= best_in_place lead, :contact
+            %td= best_in_place lead, :assigned
+            %td= best_in_place lead, :temperature
+            %td= best_in_place lead, :value
             %td= link_to 'Destroy', lead, :data => { confirm: 'Are you sure?' }, :method => :delete
