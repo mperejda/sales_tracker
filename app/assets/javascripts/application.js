@@ -13,9 +13,14 @@
 //= require jquery
 //= require best_in_place
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require bootstrap-sprockets
+//= require_tree .
 
 $(document).ready(function() {
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
+  jQuery('#contacts').dataTable();
+  jQuery('#leads').dataTable();
 });
