@@ -1,0 +1,35 @@
+.container
+  .page-header
+    = link_to new_lead_path, :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-plus
+      New Lead
+    %h1 Listing leads
+
+  .table-responsive
+    %table.table.table-striped.table-bordered.table-hover
+      %thead
+        %tr
+          %th Project
+          %th Needs
+          %th Source
+          %th Contact
+          %th Assigned
+          %th Temperature
+          %th Value
+          %th
+          %th
+          %th
+
+      %tbody
+        - @leads.each do |lead|
+          %tr
+            %td= lead.project
+            %td= lead.needs
+            %td= lead.source
+            %td= lead.contact
+            %td= lead.assigned
+            %td= lead.temperature
+            %td= lead.value
+            %td= link_to 'Show', lead
+            %td= link_to 'Edit', edit_lead_path(lead)
+            %td= link_to 'Destroy', lead, :data => { confirm: 'Are you sure?' }, :method => :delete

@@ -1,0 +1,26 @@
+.container
+  .page-header
+    = link_to leads_path, :class => 'btn btn-default' do
+      %span.glyphicon.glyphicon-list-alt
+      Back
+    = link_to edit_lead_path(@lead), :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-pencil
+      Edit
+    %h1 Show lead
+
+  %dl.dl-horizontal
+    %dt Project:
+    %dd= @lead.project
+    %dt Needs:
+    %dd= @lead.needs
+    %dt Source:
+    %dd= @lead.source
+    %dt Contact:
+    %dd= @lead.contact
+    %dt Assigned:
+    %dd= @lead.assigned
+    %dt Temperature:
+    %dd= @lead.temperature
+    %dt Value:
+    %dd= @lead.value
+
