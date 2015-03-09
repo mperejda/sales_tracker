@@ -3,10 +3,10 @@
     = link_to new_lead_path, :class => 'btn btn-primary' do
       %span.glyphicon.glyphicon-plus
       New Lead
-    %h3 Leads
+    %h3 Hot Sauce
 
   .table-responsive
-    %table.table.table-striped.table-bordered.table-hover#leads
+    %table.table.table-striped.table-bordered.table-hover
       %thead
         %tr
           %th Project
@@ -19,7 +19,64 @@
           %th
 
       %tbody
-        - @leads.each do |lead|
+        - hot_leads.each do |lead|
+          %tr
+            %td= best_in_place lead, :project
+            %td= best_in_place lead, :needs, :as => :textarea
+            %td= best_in_place lead, :source
+            %td= best_in_place lead, :contact
+            %td= best_in_place lead, :assigned
+            %td= best_in_place lead, :temperature
+            %td= best_in_place lead, :value
+            %td= link_to 'Destroy', lead, :data => { confirm: 'Are you sure?' }, :method => :delete
+
+
+
+  %h3 Medium Temps
+
+  .table-responsive
+    %table.table.table-striped.table-bordered.table-hover
+      %thead
+        %tr
+          %th Project
+          %th Needs
+          %th Source
+          %th Contact
+          %th Assigned
+          %th Temperature
+          %th Value
+          %th
+
+      %tbody
+        - medium_leads.each do |lead|
+          %tr
+            %td= best_in_place lead, :project
+            %td= best_in_place lead, :needs, :as => :textarea
+            %td= best_in_place lead, :source
+            %td= best_in_place lead, :contact
+            %td= best_in_place lead, :assigned
+            %td= best_in_place lead, :temperature
+            %td= best_in_place lead, :value
+            %td= link_to 'Destroy', lead, :data => { confirm: 'Are you sure?' }, :method => :delete
+
+
+  %h3 Cold Leads
+
+  .table-responsive
+    %table.table.table-striped.table-bordered.table-hover
+      %thead
+        %tr
+          %th Project
+          %th Needs
+          %th Source
+          %th Contact
+          %th Assigned
+          %th Temperature
+          %th Value
+          %th
+
+      %tbody
+        - cold_leads.each do |lead|
           %tr
             %td= best_in_place lead, :project
             %td= best_in_place lead, :needs, :as => :textarea
