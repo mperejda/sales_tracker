@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,300,600);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /* line 9, /Users/mperejda/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.3.3/assets/stylesheets/bootstrap/_normalize.scss */
 html {
@@ -1701,7 +1700,7 @@ html {
 
 /* line 27, /Users/mperejda/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.3.3/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -7650,7 +7649,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -7777,7 +7776,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
