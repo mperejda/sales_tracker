@@ -1,8 +1,12 @@
 .container
   .row
+    %h1 Contacts
     .panel
       .panel-body
-        %h1 Listing contacts
+        = link_to new_contact_path, :class => 'btn btn-primary' do
+          %span.glyphicon.glyphicon-plus
+
+        = link_to "Leads", leads_path
 
         %table.table.table-striped#contacts
           %thead
@@ -15,8 +19,6 @@
               %th Source
               %th Converted?
               %th
-              %th
-              %th
 
           %tbody
             - @contacts.each do |contact|
@@ -28,12 +30,4 @@
                 %td= best_in_place contact, :assigned
                 %td= best_in_place contact, :source
                 %td= best_in_place contact, :converted, :type => :input
-                %td= link_to 'Show', contact
-                %td= link_to 'Edit', edit_contact_path(contact)
                 %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-        %br
-
-        = link_to 'New Contact', new_contact_path
-
-        = link_to 'Leads', leads_path

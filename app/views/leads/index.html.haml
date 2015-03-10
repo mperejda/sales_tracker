@@ -1,11 +1,12 @@
 .container
   .row
+    %h1 Leads
     .panel
       .panel-body
         = link_to new_lead_path, :class => 'btn btn-primary' do
           %span.glyphicon.glyphicon-plus
-          New Lead
-        %h3 Leads
+          
+        = link_to "Contacts", contacts_path
 
         %table.table.table-striped#special
           %thead
